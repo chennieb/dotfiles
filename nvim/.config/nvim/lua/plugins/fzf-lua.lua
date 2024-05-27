@@ -21,6 +21,7 @@ return {
         keymap.set('n', '<C-k>', function() fzf.lsp_document_symbols() end, {})
         keymap.set('n', '<C-s>', function() fzf.blines() end, {})
         keymap.set('n', '<C-l>', function() fzf.live_grep_glob() end, {})
+        keymap.set('n', '<C-g>', function() fzf.grep() end, {})
 
     end,
     opts = {
