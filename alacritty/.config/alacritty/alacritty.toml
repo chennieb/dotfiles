@@ -6,7 +6,7 @@ live_config_reload = true
 
 [font]
 size = 13
-normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular"}
+normal = { family = "CaskaydiaCove Nerd Font", style = "Regular"}
 
 [window]
 dimensions = {columns = 160, lines = 55}
