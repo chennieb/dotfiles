@@ -1,7 +1,12 @@
 return {
     "stevearc/overseer.nvim",
-    opts = {},
-    config = function (_, opts)
-        require('overseer').setup(opts)
+    event = "VeryLazy",
+    config = function ()
+        require('overseer').setup({
+            dap = true,
+            templates = {
+                { "builtin", "user.build" },
+            },
+        })
     end
 }
