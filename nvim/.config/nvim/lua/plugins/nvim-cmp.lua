@@ -11,9 +11,6 @@ return {
     },
     config = function()
         local cmp = require("cmp")
-
-        local luasnip = require("luasnip")
-
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
         require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -21,9 +18,9 @@ return {
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
             },
-            snippet = { -- configure how nvim-cmp interacts with snippet engine
+            snippet = {
                 expand = function(args)
-                    luasnip.lsp_expand(args.body)
+                    require("luasnip").lsp_expand(args.body)
                 end,
             },
             mapping = cmp.mapping.preset.insert({
