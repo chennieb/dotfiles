@@ -1,6 +1,5 @@
 return {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
     dependencies = {
         'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
@@ -49,15 +48,15 @@ return {
                 { name = 'buffer' }
             }
         })
-
         -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-        cmp.setup.cmdline(':', {
+        cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
             sources = cmp.config.sources({
-                { name = 'path' }
+                { name = "path" },
             }, {
-                    { name = 'cmdline' }
-                })
+                { name = "cmdline" },
+            }),
+            matching = { disallow_symbol_nonprefix_matching = false },
         })
     end,
 }

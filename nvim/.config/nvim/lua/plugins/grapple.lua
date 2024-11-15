@@ -11,7 +11,6 @@ return {
     keys = {
         { "<leader>m", "<cmd>Grapple toggle<cr>", desc = "Tag a file" },
         { "<C-T>", "<cmd>Grapple toggle_tags<cr>", desc = "Open tags window" },
-        { "<C-N>", "<cmd>Grapple cycle backward<cr>", desc = "Go to previous tag" },
         { "<C-M>", "<cmd>Grapple cycle forward<cr>", desc = "Go to next tag" },
     },
 }
